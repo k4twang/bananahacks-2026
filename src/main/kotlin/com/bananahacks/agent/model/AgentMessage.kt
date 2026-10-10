@@ -5,7 +5,8 @@ import kotlinx.serialization.Serializable
 @Serializable
 data class ChatRequest(
     val prompt: String,
-    val conversationId: String? = null
+    val conversationId: String? = null,
+    val imageUrl: String? = null
 )
 
 @Serializable

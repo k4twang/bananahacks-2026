@@ -45,7 +45,7 @@ fun Application.module() {
                 val request = call.receive<ChatRequest>()
                 val conversationId = request.conversationId ?: UUID.randomUUID().toString()
                 
-                val reply = agent.processMessage(request.prompt, conversationId)
+                val reply = agent.processMessage(request.prompt, conversationId, request.imageUrl)
 
                 call.respond(
                     ChatResponse(
